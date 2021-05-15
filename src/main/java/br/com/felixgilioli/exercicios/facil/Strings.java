@@ -1,5 +1,7 @@
 package br.com.felixgilioli.exercicios.facil;
 
+import java.util.Arrays;
+
 /**
  * Classe com métodos para trabalhar com Strings.
  */
@@ -19,7 +21,15 @@ public class Strings {
      * @return string truncada.
      */
     public static String getStringTruncada(String s, int tamanho) {
-        return null;
+
+        if(s == null || tamanho < 0){
+            return s;
+        }
+        if (s.length() <= tamanho){
+            return s;
+        }
+            return s.substring(0, tamanho) + "...";
+
     }
 
     /**
@@ -29,6 +39,9 @@ public class Strings {
      * @return true se a string estiver em branco.
      */
     public static boolean isBlank(String s) {
+        if (s == null || s.isBlank()){
+            return true;
+        }
         return false;
     }
 
