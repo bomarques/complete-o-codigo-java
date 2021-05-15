@@ -34,8 +34,8 @@ class LocalDatesTest {
 
     @Test
     void getQuantidadeDeDiasEntreDatas_test04() {
-        LocalDate inicio = LocalDate.of(2021, 5, 12);
-        LocalDate fim = LocalDate.of(2021, 1, 1);
+        LocalDate fim = LocalDate.of(2021, 5, 12);
+        LocalDate inicio = LocalDate.of(2021, 1, 1);
         long quantidadeDeDiasEntreDatas = LocalDates.getQuantidadeDeDiasEntreDatas(inicio, fim);
         assertEquals(131, quantidadeDeDiasEntreDatas);
     }

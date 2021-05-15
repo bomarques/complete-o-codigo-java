@@ -1,5 +1,8 @@
 package br.com.felixgilioli.exercicios.facil;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -15,7 +18,16 @@ public class ArrayLists {
      * @return lista de inteiros apenas com números impares.
      */
     public static List<Integer> getImpares(List<Integer> numeros) {
-        return numeros;
+        List<Integer> impares = new ArrayList<>();
+        for(int n = 0; n < numeros.size();){
+            if (numeros.get(n) % 2 == 1 ){
+                impares.add(numeros.get(n));
+                n ++;
+            } else {
+                n++;
+            }
+        }
+        return impares ;
     }
 
     /**
@@ -25,6 +37,19 @@ public class ArrayLists {
      * @return quantidade de pessoas.
      */
     public static long getQuantidadeDePessoasQueComecamComALetra(List<String> pessoas, String letra) {
-        return 0;
+        long palavras = 0;
+        for (int i = 0; i < pessoas.size();){
+            String pessoa = pessoas.get(i);
+            char letra1 = pessoa.charAt(0);
+            char letraP = letra.charAt(0);
+            if (Character.compare(letra1,letraP) == 0){
+                palavras ++;
+                i++;
+            } else {
+                i++;
+            }
+
+        }
+        return palavras;
     }
 }

@@ -1,5 +1,7 @@
 package br.com.felixgilioli.exercicios.facil;
 
+import java.util.Arrays;
+
 /**
  * Classe com métodos para calculos matemáticos.
  */
@@ -13,7 +15,13 @@ public class Calculadora {
      * @return média dos inteiros.
      */
     public static double getMedia(int[] ints) {
-        return 0;
+        double media ;
+        double soma = 0;
+        for(int i = 0; i < ints.length;){
+            soma += ints[i];
+            i++;
+        } media = soma / ints.length;
+        return media;
     }
 
     /**
@@ -23,7 +31,13 @@ public class Calculadora {
      * @return o maior número.
      */
     public static int getMaior(int a, int b) {
-        return 0;
+        int result;
+        if(a < b){
+            result = b;
+        }else {
+            result = a;
+        }
+        return result;
     }
 
     /**
@@ -32,7 +46,8 @@ public class Calculadora {
      * @return raíz quadrada do {@param n}.
      */
     public static double getRaizQuadrada(int n) {
-        return 0;
+        double raiz = Math.sqrt(n);
+        return raiz;
     }
 
     /**
@@ -42,7 +57,8 @@ public class Calculadora {
      * @return valor absoluto.
      */
     public static int getAbsoluto(int n) {
-        return 0;
+        double absoluto = Math.abs(n);
+        return (int) absoluto;
     }
 
 }

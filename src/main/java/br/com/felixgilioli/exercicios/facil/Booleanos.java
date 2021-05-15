@@ -14,6 +14,11 @@ public class Booleanos {
      * @return valor booleano não nulo.
      */
     public static Boolean falseIfNull(Boolean bool) {
-        return null;
+        if (bool == null){
+            bool = false;
+        } else {
+            bool = bool;
+        }
+        return bool;
     }
 }
